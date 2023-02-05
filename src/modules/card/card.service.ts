@@ -11,5 +11,4 @@ export class CardService {
     async createCard(createCardDto: CreateCardDto, session: ClientSession) {
         return await this.cardRepository.createCard(createCardDto, session);
     }
-
 }
