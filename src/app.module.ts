@@ -9,10 +9,11 @@ import { ClientModule } from './modules/client/client.module';
 import { ProductModule } from './modules/product/product.module';
 import { SaleModule } from './modules/sale/sale.module';
 import { UserModule } from './modules/user/user.module';
+import { CardModule } from './modules/card/card.module';
 
 @Module({
     imports: [
-        ConfigModule,
+    ConfigModule,
         // MongoDB Connection
         MongooseModule.forRootAsync({
             inject: [ConfigService],
@@ -22,6 +23,7 @@ import { UserModule } from './modules/user/user.module';
         ProductModule,
         SaleModule,
         UserModule,
+        CardModule
     ],
     controllers: [AppController],
     providers: [AppService],
